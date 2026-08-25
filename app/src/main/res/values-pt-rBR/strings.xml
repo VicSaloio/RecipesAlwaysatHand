@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Recipes Always at Hand</string>
+    <string name="app_title">Comece a Cozinhar!</string>
+    <string name="Your_favorite_recipes">Suas receitas favoritas, sempre ao seu alcance.</string>
+    <string name="button_login">Entrar</string>
+    <string name="button_sign">Registrar-se</string>
+</resources>

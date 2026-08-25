@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Recipes Always at Hand</string>
+    <string name="app_title">Start Cooking!</string>
+    <string name="Your_favorite_recipes">Your favorite recipes, always within reach</string>
+    <string name="button_login">Login</string>
+    <string name="button_sign">Sign Up</string>
+</resources>
