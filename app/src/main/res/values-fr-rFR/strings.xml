@@ -4,4 +4,6 @@
     <string name="Your_favorite_recipes">Vos recettes préférées, toujours à portée de main.</string>
     <string name="button_login">Connexion</string>
     <string name="button_sign">Inscrire</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_a_new_account">"Create a new account "</string>
 </resources>
