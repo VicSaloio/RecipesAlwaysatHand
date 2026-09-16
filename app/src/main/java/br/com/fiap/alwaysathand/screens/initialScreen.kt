@@ -41,7 +41,7 @@ fun InitialScreen(){
             )
     ){
         TopEndCard(modifier = Modifier.align(Alignment.TopEnd))
-       BottomStartCard(modifier = Modifier.align(Alignment.BottomStart))
+        BottomStartCard(modifier = Modifier.align(Alignment.BottomStart))
         Column(
             modifier = Modifier
                 .padding(16.dp)

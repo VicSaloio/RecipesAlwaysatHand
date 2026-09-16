@@ -4,6 +4,22 @@
     <string name="Your_favorite_recipes">Tus recetas favoritas, siempre a tu alcance.</string>
     <string name="button_login">Acceso</string>
     <string name="button_sign">Inscribirse</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="create_a_new_account">"Create a new account "</string>
+    <string name="sign_up">Inscribirse</string>
+    <string name="create_a_new_account">"Crear una cuenta nueva"</string>
+    <string name="user_image">Imagen de usuario</string>
+    <string name="camera_icon">Camera icon</string>
+    <string name="your_name">"Su nombre"</string>
+    <string name="person_icon">Icono de persona</string>
+    <string name="your_e_mail">Tu correo electrónico</string>
+    <string name="e_mail_icon">Icono de correo electrónico</string>
+    <string name="your_password">Tu contraseña</string>
+    <string name="password_icon">Icono de contraseña</string>
+    <string name="create_account">Crear una cuenta</string>
+    <string name="login">Acceso</string>
+    <string name="please_sign_in_to_continue">Por favor, inicie sesión para continuar.</string>
+    <string name="sign_in">INICIAR SESIÓN</string>
+    <string name="don_t_have_an_account">No tienes cuenta?</string>
+    <string name="sign_up_login_buttom">Inscribirse</string>
+
+
 </resources>

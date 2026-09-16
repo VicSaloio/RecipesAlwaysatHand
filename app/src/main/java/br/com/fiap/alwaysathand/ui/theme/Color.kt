@@ -1,4 +1,5 @@
 package br.com.fiap.alwaysathand.ui.theme
+
 import androidx.compose.ui.graphics.Color
 
 // CORES DO TEMA CLARO

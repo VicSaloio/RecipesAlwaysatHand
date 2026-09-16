@@ -5,5 +5,21 @@
     <string name="button_login">Login</string>
     <string name="button_sign">Sign Up</string>
     <string name="sign_up">Sign Up</string>
-    <string name="create_a_new_account">"Create a new account "</string>
+    <string name="create_a_new_account">"Create a new account"</string>
+    <string name="user_image">User Image</string>
+    <string name="camera_icon">Camera icon</string>
+    <string name="your_name">"Your name "</string>
+    <string name="person_icon">Person icon</string>
+    <string name="your_e_mail">Your e-mail</string>
+    <string name="e_mail_icon">E-mail icon</string>
+    <string name="your_password">Your password</string>
+    <string name="password_icon">Password icon</string>
+    <string name="create_account">Create account</string>
+    <string name="login">Login</string>
+    <string name="please_sign_in_to_continue">Please, sign in to continue</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up_login_buttom">Sign up</string>
+
+
 </resources>
