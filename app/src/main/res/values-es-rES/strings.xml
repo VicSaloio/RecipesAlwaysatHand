@@ -20,6 +20,14 @@
     <string name="sign_in">INICIAR SESIÓN</string>
     <string name="don_t_have_an_account">No tienes cuenta?</string>
     <string name="sign_up_login_buttom">Inscribirse</string>
+    <string name="home">Página de inicio</string>
+    <string name="favorites">Favoritos</string>
+    <string name="profile">Perfil</string>
+    <string name="search_by_recipes">Buscar por recetas</string>
+    <string name="search_icon">Icono de búsqueda</string>
+    <string name="cooking">Cocinando</string>
+    <string name="categories">Categorías</string>
+    <string name="newly_added_recipes">Recetas recién añadidas</string>
 
 
 </resources>

@@ -111,7 +111,7 @@ fun UserImage (modifier: Modifier = Modifier) {
             .size(120.dp)
     ) {
         Image(
-            painter = painterResource(R.drawable.man),
+            painter = painterResource(R.drawable.boy),
             contentDescription = stringResource(R.string.user_image),
             modifier = Modifier
                 .size(110.dp)
