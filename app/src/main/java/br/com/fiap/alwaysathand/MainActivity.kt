@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import br.com.fiap.alwaysathand.navigation.NavigationRoutes
 import br.com.fiap.alwaysathand.screens.HomeScreen
 import br.com.fiap.alwaysathand.screens.InitialScreen
 import br.com.fiap.alwaysathand.screens.LoginScreen
@@ -16,10 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RecipesAlwaysAtHandTheme {
-                //InitialScreen()
-                //SignupScreen()
-                //LoginScreen()
-                HomeScreen()
+                NavigationRoutes()
             }
         }
     }

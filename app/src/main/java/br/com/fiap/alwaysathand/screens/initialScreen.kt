@@ -14,11 +14,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,11 +25,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import br.com.fiap.alwaysathand.R
+import br.com.fiap.alwaysathand.navigation.Destination
 import br.com.fiap.alwaysathand.ui.theme.RecipesAlwaysAtHandTheme
 
 @Composable
-fun InitialScreen(){
+fun InitialScreen(navController: NavController){
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -74,7 +74,9 @@ fun InitialScreen(){
                 )
                 Row() {
                     Button(
-                        onClick = {},
+                        onClick = {
+                            navController.navigate(Destination.LoginScreen.route)
+                        },
                         colors = ButtonDefaults
                             .buttonColors(
                                 containerColor = MaterialTheme.colorScheme.primary
@@ -94,7 +96,9 @@ fun InitialScreen(){
                     }
                     Spacer(modifier = Modifier.width(8.dp))
                     Button(
-                        onClick = {},
+                        onClick = {
+                            navController.navigate(Destination.SignupScreen.route)
+                        },
                         colors = ButtonDefaults
                             .buttonColors(
                                 containerColor = MaterialTheme.colorScheme.tertiary
@@ -128,6 +132,6 @@ fun InitialScreen(){
 )
 fun InitialScreenPreview() {
     RecipesAlwaysAtHandTheme() {
-        InitialScreen()
+        InitialScreen(rememberNavController())
     }
 }

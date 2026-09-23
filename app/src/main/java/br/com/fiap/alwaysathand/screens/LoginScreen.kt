@@ -32,13 +32,17 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import br.com.fiap.alwaysathand.R
+import br.com.fiap.alwaysathand.navigation.Destination
 import br.com.fiap.alwaysathand.ui.theme.RecipesAlwaysAtHandTheme
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun LoginScreen(navController: NavHostController) {
     Box(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
     ) {
@@ -59,19 +63,18 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             LoginTitle()
-            LoginFormScreen()
+            LoginForm(navController)
         }
     }
 }
 
-@Preview (showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun LoginScreenPreview() {
     RecipesAlwaysAtHandTheme() {
-        LoginScreen()
+        LoginScreen(rememberNavController())
     }
 }
-
 
 @Composable
 fun LoginTitle(modifier: Modifier = Modifier) {
@@ -95,7 +98,7 @@ fun LoginTitle(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview (showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun LoginTitlePreview() {
     RecipesAlwaysAtHandTheme {
@@ -104,7 +107,7 @@ private fun LoginTitlePreview() {
 }
 
 @Composable
-fun LoginForm(modifier: Modifier = Modifier) {
+fun LoginForm(navController: NavController) {
     Column() {
         OutlinedTextField(
             value = "",
@@ -136,6 +139,7 @@ fun LoginForm(modifier: Modifier = Modifier) {
                 imeAction = ImeAction.Next
             )
         )
+
         OutlinedTextField(
             value = "",
             onValueChange = {},
@@ -173,20 +177,24 @@ fun LoginForm(modifier: Modifier = Modifier) {
                 imeAction = ImeAction.Done
             )
         )
+
         Spacer(modifier = Modifier.height(32.dp))
+
         Button(
             onClick = {},
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp),
-            shape = RoundedCornerShape(16.dp )
+            shape = RoundedCornerShape(16.dp)
         ) {
             Text(
                 text = stringResource(R.string.sign_in),
                 style = MaterialTheme.typography.labelMedium
             )
         }
+
         Spacer(modifier = Modifier.height(16.dp))
+
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -198,9 +206,11 @@ fun LoginForm(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.primary
             )
-            TextButton(
-                onClick = {},
 
+            TextButton(
+                onClick = {
+                    navController.navigate(Destination.SignupScreen.route)
+                },
             ) {
                 Text(
                     text = stringResource(R.string.sign_up_login_buttom),
@@ -213,10 +223,10 @@ fun LoginForm(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview (showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun LoginFormScreen() {
     RecipesAlwaysAtHandTheme {
-        LoginForm()
+        LoginForm(rememberNavController())
     }
 }

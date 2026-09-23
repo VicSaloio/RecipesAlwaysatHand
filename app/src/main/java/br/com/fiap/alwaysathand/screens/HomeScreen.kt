@@ -50,11 +50,13 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import br.com.fiap.alwaysathand.R
 import br.com.fiap.alwaysathand.ui.theme.RecipesAlwaysAtHandTheme
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(navController: NavController) {
     Surface(
         modifier = Modifier
             .fillMaxSize()
@@ -85,7 +87,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun HomeScreenPreview() {
     RecipesAlwaysAtHandTheme() {
-        HomeScreen()
+        HomeScreen(rememberNavController())
     }
 }
 
