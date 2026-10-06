@@ -17,12 +17,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -56,13 +54,13 @@ import br.com.fiap.alwaysathand.R
 import br.com.fiap.alwaysathand.ui.theme.RecipesAlwaysAtHandTheme
 
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(navController: NavController, email: String?) {
     Surface(
         modifier = Modifier
             .fillMaxSize()
     ) {
         Scaffold(
-            topBar = {MyTopAppBar()},
+            topBar = {MyTopAppBar(email!!) },
             bottomBar = {MyBottomAppBar()},
             floatingActionButton = {
                 FloatingActionButton(
@@ -87,13 +85,13 @@ fun HomeScreen(navController: NavController) {
 @Composable
 private fun HomeScreenPreview() {
     RecipesAlwaysAtHandTheme() {
-        HomeScreen(rememberNavController())
+        HomeScreen(rememberNavController(), "")
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTopAppBar(modifier: Modifier = Modifier) {
+fun MyTopAppBar(email: String) {
     TopAppBar(
         modifier = Modifier
             .fillMaxWidth(),
@@ -114,7 +112,7 @@ fun MyTopAppBar(modifier: Modifier = Modifier) {
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = "victor@email.com",
+                        text = email,
                         style = MaterialTheme.typography.displaySmall,
                         color = MaterialTheme.colorScheme.secondary,
                     )
@@ -146,7 +144,7 @@ fun MyTopAppBar(modifier: Modifier = Modifier) {
 @Composable
 private fun MyTopAppBarPreview() {
     RecipesAlwaysAtHandTheme {
-        MyTopAppBar()
+        MyTopAppBar("")
     }
 }
 
